@@ -65,7 +65,6 @@ namespace Day_1
                     {
                         if (((grid[i+1][j+1] == 'M' && grid[i-1][j-1] == 'S') || (grid[i + 1][j + 1] == 'S' && grid[i - 1][j - 1] == 'M')) && ((grid[i + 1][j - 1] == 'M' && grid[i - 1][j + 1] == 'S') || (grid[i + 1][j - 1] == 'S' && grid[i - 1][j + 1] == 'M')))
                         {
-                            Console.WriteLine((i+1,j+1));
                             count++;
                         }
                     }
