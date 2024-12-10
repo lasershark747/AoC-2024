@@ -23,7 +23,6 @@ namespace Day_10
                 }
             }
 
-
             //Part 1
             for (int i = 0; i < map.Count; i++)
             {
@@ -35,8 +34,6 @@ namespace Day_10
                     }
                 }
             }
-
-
             Console.WriteLine("Part 1: " + count);
 
             //Part 2
@@ -52,8 +49,6 @@ namespace Day_10
                     }
                 }
             }
-
-
             Console.WriteLine("Part 2: " + count);
             Console.ReadKey();
         }
