@@ -62,9 +62,7 @@ namespace Day_10
         {
             List<(int,int)> end = new List<(int,int)> ();
             Queue<(int,int)> queue = new Queue<(int, int)> ();
-            List<(int,int)> visited = new List<(int,int)> ();
             queue.Enqueue((y, x));
-            visited.Add((y, x));
             (int, int)[] directions = { (1, 0), (0, 1), (-1, 0), (0, -1) };
             while (queue.Count > 0) 
             {
@@ -76,10 +74,9 @@ namespace Day_10
                 for(int i = 0; i < directions.Length; i++)
                 {
                     var next = (location.Item1 + directions[i].Item1, location.Item2 + directions[i].Item2);
-                    if(inside(next, grid.Count, grid[0].Count) && grid[location.Item1][location.Item2] - grid[next.Item1][next.Item2] == -1 && !visited.Contains(next))
+                    if(inside(next, grid.Count, grid[0].Count) && grid[location.Item1][location.Item2] - grid[next.Item1][next.Item2] == -1)
                     {
                         queue.Enqueue(next);
-                        visited.Add(next);
                     }
                 }
             }
@@ -90,9 +87,7 @@ namespace Day_10
         {
             List<(int, int)> end = new List<(int, int)>();
             Queue<(int, int)> queue = new Queue<(int, int)>();
-            List<(int, int)> visited = new List<(int, int)>();
             queue.Enqueue((y, x));
-            visited.Add((y, x));
             (int, int)[] directions = { (1, 0), (0, 1), (-1, 0), (0, -1) };
             while (queue.Count > 0)
             {
@@ -107,7 +102,6 @@ namespace Day_10
                     if (inside(next, grid.Count, grid[0].Count) && grid[location.Item1][location.Item2] - grid[next.Item1][next.Item2] == -1)
                     {
                         queue.Enqueue(next);
-                        visited.Add(next);
                     }
                 }
             }
